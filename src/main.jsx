@@ -227,7 +227,7 @@ function App() {
 
       <audio
         ref={audioRef}
-        src="/public/music/InvitationCardMusic.mp3"
+        src="/music/InvitationCardMusic.mp3"
         loop
         preload="auto"
       />
