@@ -6,6 +6,7 @@ import {
   MapPin,
   Heart,
   Sparkles,
+  ArrowUp,
   ArrowDown,
   Volume2,
   VolumeX
@@ -836,33 +837,30 @@ function EnvelopeScreen({
           ===================================================== */}
 
       <motion.div
-        className="tap-hint"
-
-        animate={
-          opening
-            ? {
-              opacity: 0,
-              y: 10
-            }
-            : {
-              opacity: [0.5, 1, 0.5],
-              y: [0, -3, 0]
-            }
+  className="tap-hint"
+  animate={
+    opening
+      ? {
+          opacity: 0,
+          y: 10
         }
+      : {
+          opacity: [0.55, 1, 0.55],
+          y: [0, -4, 0]
+        }
+  }
+  transition={{
+    repeat: opening ? 0 : Infinity,
+    duration: 1.8,
+    ease: "easeInOut"
+  }}
+>
+  <ArrowUp size={16} strokeWidth={1.6} />
 
-        transition={{
-          repeat: opening ? 0 : Infinity,
-          duration: 2
-        }}
-      >
-
-        <span>
-          Tap to open
-        </span>
-
-        <ArrowDown size={15} />
-
-      </motion.div>
+  <span>
+    TAP TO OPEN
+  </span>
+</motion.div>
 
 
       <motion.div
@@ -1139,19 +1137,24 @@ function Hero({
 
 
         <motion.div
-          className="scroll-cue"
+  className="scroll-cue"
+  animate={{
+    y: [0, 5, 0],
+    opacity: [0.55, 1, 0.55]
+  }}
+  transition={{
+    repeat: Infinity,
+    duration: 1.8,
+    ease: "easeInOut"
+  }}
+>
+  <span>SCROLL DOWN</span>
 
-          animate={{
-            y: [0, 6, 0]
-          }}
-
-          transition={{
-            repeat: Infinity,
-            duration: 1.8
-          }}
-        >
-          <ArrowDown size={18} />
-        </motion.div>
+  <ArrowDown
+    size={18}
+    strokeWidth={1.4}
+  />
+</motion.div>
 
       </motion.div>
 

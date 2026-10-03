@@ -13,7 +13,7 @@ export const invitation = {
     date: "Saturday, 7th November 2026",
     time: "7:00 PM onwards",
     venue: "Noor Baug Hall ",
-    address: "Shimla Pard, Mumbra, Thane - 400612",
+    address: "Shimla Park, Mumbra, Thane - 400612",
     mapLink: "https://maps.app.goo.gl/LXqdbCdqbzy7tgDG6"
   },
   quote: "And among His signs is that He created for you spouses from among yourselves so that you may find tranquility in them; and He placed between you affection and mercy.",
